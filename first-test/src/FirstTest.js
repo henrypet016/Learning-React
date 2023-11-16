@@ -7,4 +7,17 @@ const FirstTest = () => {
   )
 }
 
+const SecondTest = () => {
+  return (
+    <div>
+        <p>This is a paragraph</p>
+    </div>
+  )
+}
+
+
 export default FirstTest;
+
+export {
+  SecondTest,
+}
