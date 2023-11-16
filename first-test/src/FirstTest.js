@@ -1,7 +1,9 @@
 const FirstTest = () => {
   return (
     <div>
-        <h2>first test</h2>
+        <h2> First test </h2>
     </div>
   )
 }
+
+export default FirstTest;
