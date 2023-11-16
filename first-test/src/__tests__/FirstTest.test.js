@@ -8,3 +8,11 @@ test("Example 1 renders successfully", () => {
 
     expect(element).toBeInTheDocument();
 })
+
+test("Example 2 renders successfully", () => {
+    render(<FirstTest/>);
+
+    const element = screen.getByText(/Yoooo/i);
+
+    expect(element).toBeInTheDocument();
+})
