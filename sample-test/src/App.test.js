@@ -9,4 +9,3 @@ test("Example 1 renders successfully", () => {
     expect(element).toBeInTheDocument();
 })
 
-export default function FirstTest
