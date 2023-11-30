@@ -2,7 +2,7 @@ import "./App.css";
 import React, { useState, useEffect } from "react";
 
 function App() {
-  const url = "https://jsonplaceholder.typicode.com/users";
+  const url = "https://api.elifesciences.org/articles/85056";
   const [data, setData] = useState([]);
 
   const fetchInfo = () => {
