@@ -12,7 +12,9 @@ function App() {
     })
   return (
     <div className="App">
-      <button> Generate Cat Fact </button>
+      <button> Article 1 </button>
+      <button> Article 2 </button>
+      <button> Article 3 </button>
       <h1> {articleTitle} </h1>
       <p> {articleImpactStatement} </p>
     </div>
