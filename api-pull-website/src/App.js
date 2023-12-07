@@ -1,41 +1,20 @@
-import "./App.css";
-import React, { useState, useEffect } from "react";
+import Axios from "axios";
+import {useState} from "react";
 
 function App() {
-  const url = "https://api.elifesciences.org/articles/85056";
-  const [data, setData] = useState([]);
-
-  const fetchInfo = () => {
-    return fetch(url)
-      .then((res) => res.json())
-      .then((d) => setData(d))
-  }
-
-
-  useEffect(() => {
-    fetchInfo();
-  }, []);
-
+    const [articleTitle, setArticleTitle] = useState("");
+    const [articleImpactStatement, setArticleImpactStatement] = useState("");
+    Axios.get("https://api.elifesciences.org/articles/85398").then((res) => {
+      setArticleTitle(res.data.title);
+    })
+    Axios.get("https://api.elifesciences.org/articles/85398").then((res) => {
+      setArticleImpactStatement(res.data.impactStatement);
+    })
   return (
     <div className="App">
-      <h1 style={{ color: "green" }}>using JavaScript inbuilt FETCH API</h1>
-      <center>
-        {data.map((dataObj, index) => {
-          return (
-            <div
-              style={{
-                width: "15em",
-                backgroundColor: "#35D841",
-                padding: 2,
-                borderRadius: 10,
-                marginBlock: 10,
-              }}
-            >
-              <p style={{ fontSize: 20, color: 'white' }}>{dataObj.name}</p>
-            </div>
-          );
-        })}
-      </center>
+      <button> Generate Cat Fact </button>
+      <h1> {articleTitle} </h1>
+      <p> {articleImpactStatement} </p>
     </div>
   );
 }
