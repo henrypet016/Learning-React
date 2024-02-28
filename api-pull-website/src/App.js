@@ -21,7 +21,6 @@ function App() {
   };
 
   useEffect(() => {
-    // Fetch data for the default article (85398)
     fetchArticleData("85398");
   }, []);
 
